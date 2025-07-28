@@ -4,7 +4,10 @@ import { Transform } from "./transform";
 
 const SERIES_START = 1;
 
-const transforms = [new Transform(3, "Fizz"), new Transform(5, "Buzz")];
+const transforms: Transform[] = [
+  new Transform(3, "Fizz"),
+  new Transform(5, "Buzz"),
+];
 
 export function fizzbuzz(value: number): string {
   if (!value) throw new EmptyValueError();
@@ -15,9 +18,7 @@ export function fizzbuzz(value: number): string {
   for (let i = SERIES_START; i <= value; i++) {
     if (i > SERIES_START) result += " ";
 
-    const display = transforms.find((t) => i % t.value === 0)?.display;
-
-    result += display || i.toString();
+    result += transforms.find((t) => t.match(i))?.display || i.toString();
   }
 
   return result;
