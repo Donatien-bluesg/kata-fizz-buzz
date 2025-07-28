@@ -3,10 +3,10 @@ import { ValueTooLowError } from "./errors/valuye-to-low.error";
 
 const SERIES_START = 1;
 
-const FIZZ_NUMBER = 3;
-const FIZZ_NAME = "Fizz";
-const BUZZ_NUMBER = 5;
-const BUZZ_NAME = "Buzz";
+const transforms = [
+  { value: 3, display: "Fizz" },
+  { value: 5, display: "Buzz" },
+];
 
 export function fizzbuzz(value: number): string {
   if (!value) throw new EmptyValueError();
@@ -17,9 +17,9 @@ export function fizzbuzz(value: number): string {
   for (let i = SERIES_START; i <= value; i++) {
     if (i > SERIES_START) result += " ";
 
-    if (i % FIZZ_NUMBER === 0) result += FIZZ_NAME;
-    else if (i % BUZZ_NUMBER === 0) result += BUZZ_NAME;
-    else result += i.toString();
+    const display = transforms.find((t) => i % t.value === 0)?.display;
+
+    result += display || i.toString();
   }
 
   return result;
