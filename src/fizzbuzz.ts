@@ -1,3 +1,5 @@
+import { EmptyValueError } from "./errors/empty-value.error";
+
 export function fizzbuzz(n: number): string {
-  throw new Error("Invalid empty value");
+  throw new EmptyValueError();
 }
