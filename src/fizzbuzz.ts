@@ -5,6 +5,7 @@ import { Transform } from "./transform";
 const SERIES_START = 1;
 
 const transforms: Transform[] = [
+  new Transform(15, "FizzBuzz"),
   new Transform(3, "Fizz"),
   new Transform(5, "Buzz"),
 ];

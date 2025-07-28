@@ -24,4 +24,10 @@ describe("fizzbuzz", () => {
   it("should print Buzz for all numbers multiple of 5", () => {
     expect(fizzbuzz(11)).toBe("1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11");
   });
+
+  it("should print FizzBuzz for all numbers multiple of 15", () => {
+    expect(fizzbuzz(16)).toBe(
+      "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16",
+    );
+  });
 });
