@@ -1,4 +1,6 @@
-# Typescript Quick Boilerplate
+# Typescript Kata: FizzBuzz
+
+### [See the exercise instructions here](/instructions.md)
 
 ### Using:
 
