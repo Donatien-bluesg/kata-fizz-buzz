@@ -5,6 +5,8 @@ const SERIES_START = 1;
 
 const FIZZ_NUMBER = 3;
 const FIZZ_NAME = "Fizz";
+const BUZZ_NUMBER = 5;
+const BUZZ_NAME = "Buzz";
 
 export function fizzbuzz(value: number): string {
   if (!value) throw new EmptyValueError();
@@ -16,6 +18,7 @@ export function fizzbuzz(value: number): string {
     if (i > SERIES_START) result += " ";
 
     if (i % FIZZ_NUMBER === 0) result += FIZZ_NAME;
+    else if (i % BUZZ_NUMBER === 0) result += BUZZ_NAME;
     else result += i.toString();
   }
 

@@ -20,4 +20,8 @@ describe("fizzbuzz", () => {
   it("should print Fizz for all numbers multiple of 3", () => {
     expect(fizzbuzz(4)).toBe("1 2 Fizz 4");
   });
+
+  it("should print Buzz for all numbers multiple of 5", () => {
+    expect(fizzbuzz(11)).toBe("1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11");
+  });
 });
