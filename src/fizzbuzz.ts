@@ -1,12 +1,10 @@
 import { EmptyValueError } from "./errors/empty-value.error";
 import { ValueTooLowError } from "./errors/valuye-to-low.error";
+import { Transform } from "./transform";
 
 const SERIES_START = 1;
 
-const transforms = [
-  { value: 3, display: "Fizz" },
-  { value: 5, display: "Buzz" },
-];
+const transforms = [new Transform(3, "Fizz"), new Transform(5, "Buzz")];
 
 export function fizzbuzz(value: number): string {
   if (!value) throw new EmptyValueError();
