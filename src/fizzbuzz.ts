@@ -9,7 +9,8 @@ export function fizzbuzz(value: number): string {
 
   for (let i = 1; i <= value; i++) {
     if (i > 1) result += " ";
-    result += i.toString();
+    if (i % 3 === 0) result += "Fizz";
+    else result += i.toString();
   }
 
   return result;
